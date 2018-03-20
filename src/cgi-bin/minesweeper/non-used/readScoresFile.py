@@ -16,7 +16,7 @@ print "<body><h1>" + string + "</h1>"
 
 data = cgi.FieldStorage()
 
-with open('/home/kaudso/public_html/prax3/scores.txt') as f:  
+with open('scores.txt') as f:  
    line = f.readline()
    count = 1
    while line:
