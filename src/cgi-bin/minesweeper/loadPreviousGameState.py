@@ -13,7 +13,7 @@ print
 data = cgi.FieldStorage()
 name = data["name"].value
 filename = '' + str(name) + '.json'
-directory = '/home/kaudso/public_html/prax3/savegames/'
+directory = '/savegames/'
 
 def getJSON(filename, dir):
     with open(dir + filename, 'r') as jsonfile:
