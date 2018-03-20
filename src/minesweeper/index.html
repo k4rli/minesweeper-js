@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Minesweeper - Game</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
+	<meta name="description" content="OG Minesweeper" />
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<script src="game.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="stylesheet.css" />
+</head>
+
+<body onload=javascript:readResults()>
+	<br>
+	<div class="center" id="main_wrapper">
+		<h1>OG Minesweeper</h1>
+		Welcome to this wonderful game!
+	</div>
+	<br>
+
+	<div class="center" id="main_wrapper">
+		<h1>PREFERENCES</h1>
+		<p>Enter your name:</p> <input type="text" id="username" placeholder="name" style="text-align: center"><br><br>
+		Choose the size of the board: <br><br>
+		<div class="container">
+			<input type="radio" name="boardSize" checked="checked" value="8"> 8x8</input>
+			<input type="radio" name="boardSize" value="12"> 12x12</input>
+			<input type="radio" name="boardSize" value="16"> 16x16</input>
+		</div>
+		<br>
+		<form id="prefs">
+		And now choose the amount of bombs on the board: <br><br>
+		<input type="number" name="enter" style="width: 50px; text-align: center;" class="enter" id="mines" value="10"/>
+		</form>
+		<br>
+		<input type="button" class="startbtn" value="Start game" onclick="javascript:main()">
+		<p></p>
+		<input type="button" class="startbtn" value="Load previous game" onclick="javascript:loadPreviousGame()">
+	</div>
+	<br>
+	<div class="center" id="main_wrapper">
+		<h1>GAME</h1>
+		<div class="board">
+			<center><table id="toprow">
+				<tr>
+					<td id="face" class="top"><img src='img/bored.gif' width='28' height='28' </img></td>
+				</tr>
+			</table>
+			<table id="minesweeper"></table>
+			</center>
+		</div>
+	</div>
+	<br>
+	<div class="center" id="main_wrapper">
+		<h1 style="line-height: 1em; margin-bottom: 5px">CURRENT SESSION</h1>
+		<br>
+		<a href="scores.html" class="btn">View all scores</a>
+		<table class="scoreboard" id="currentScoreboard"><p id="scoretext"></p>
+		</table>
+	</div>
+	<br>
+</body>
+</html>
