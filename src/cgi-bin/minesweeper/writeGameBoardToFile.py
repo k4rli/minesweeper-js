@@ -10,5 +10,5 @@ print
 data = cgi.FieldStorage()
 username = data["username"].value
 
-with open ('/home/kaudso/public_html/prax3/savegames/' + username + '_board.txt','w+') as fileOutput:
+with open ('/savegames/' + username + '_board.txt','w+') as fileOutput:
     fileOutput.write(data["boardText"].value)
